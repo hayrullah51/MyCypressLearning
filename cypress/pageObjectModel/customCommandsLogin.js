@@ -1,0 +1,20 @@
+class CustomCommandsLogin {
+    
+    get userNameField() {
+      return  cy.get('input[data-qa="login-email"]')
+    }
+
+    get userNameField() {
+        return  cy.get('input[data-qa="login-email"]')
+      }
+
+      get passwordField() {
+        return cy.get('input[data-qa="login-password"]')
+      }
+
+      get loginButton() {
+        return  cy.get('button[data-qa="login-button"]')
+      }
+}
+
+export default new CustomCommandsLogin()
