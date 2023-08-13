@@ -4,7 +4,7 @@ describe("Cypress Session Kullanimi", () => {
     const password = "a5151.";
     cy.loginWithSession(username, password);
   });
-  it.skip("Siteye git ve bir makale ekle", () => {
+  it.skip("Siteye git ve bir makale ekle -1", () => {
     cy.visit("https://react-redux.realworld.io/");
     cy.contains("New Post").click();
     cy.get("div#main fieldset:nth-child(1) > input").type("Deneme TITLE");
@@ -13,5 +13,6 @@ describe("Cypress Session Kullanimi", () => {
     cy.get("div#main fieldset:nth-child(4) > input").type("Deneme TAG");
     cy.get("div#main fieldset:nth-child(4) > input").click();
     cy.contains("Edit Article").should("be.visible");
+
   });
 });
