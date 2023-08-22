@@ -17,6 +17,10 @@ module.exports = defineConfig({
       google:"https://www.google.com",//staging env
       saucedemo:"https://www.saucdemo.com"
     },
+    specPattern:'cypress/e2e/**/*.{js, jsx, ts, tsx}',
+    experimentalWebKitSupport: true, // Safari'de test kosmak icin
+    experimentalRunAllSpecs: true, // Tum spec'leri ayni anda yada dosya dosya run etmek icin
+    watchForFileChanges: false, // testimin her degisiklikte (otomatik olarak) hemen ard arda test etmesini durdurmak icin
     baseUrl: "https://example.cypress.io/",
   },
 });
